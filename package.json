@@ -26,11 +26,11 @@
   },
   "scripts": {
     "build": "ngc -p tsconfig.json && npm run bundle1 && npm run bundle2 && npm run bundle3 && npm run bundle4 && npm run bundle5",
-    "bundle1": "rollup -c rollup-config.js -i src/app1/main.js -o dist/build1.js",
-    "bundle2": "rollup -c rollup-config.js -i src/app2/main.js -o dist/build2.js",
-    "bundle3": "rollup -c rollup-config.js -i src/app3/main.js -o dist/build3.js",
-    "bundle4": "rollup -c rollup-config.js -i src/app4/main.js -o dist/build4.js",
-    "bundle5": "rollup -c rollup-config.js -i src/app5/main.js -o dist/build5.js",
+    "bundle1": "rollup -c rollup-config.js -i src/app1/main.js -o dist/build1.js -m && source-map-explorer --html dist/build1.js > dist/build1.html",
+    "bundle2": "rollup -c rollup-config.js -i src/app2/main.js -o dist/build2.js -m && source-map-explorer --html dist/build2.js > dist/build2.html",
+    "bundle3": "rollup -c rollup-config.js -i src/app3/main.js -o dist/build3.js -m && source-map-explorer --html dist/build3.js > dist/build3.html",
+    "bundle4": "rollup -c rollup-config.js -i src/app4/main.js -o dist/build4.js -m && source-map-explorer --html dist/build4.js > dist/build4.html",
+    "bundle5": "rollup -c rollup-config.js -i src/app5/main.js -o dist/build5.js -m && source-map-explorer --html dist/build5.js > dist/build5.html",
     "start": "npm run build && lite-server"
   }
 }

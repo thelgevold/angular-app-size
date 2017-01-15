@@ -7,6 +7,7 @@ export default {
   sourceMap: false,
   format: 'iife',
   moduleName: 'demo',
+  sourceMap: true,
   plugins: [
       nodeResolve({jsnext: true, module: true}),
       commonjs({
