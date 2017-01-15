@@ -1,0 +1,5 @@
+node_modules
+src/aot
+src/**/*.js
+src/**/*.js.map
+src/**/*.metadata.json
