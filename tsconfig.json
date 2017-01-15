@@ -6,9 +6,7 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es2015", "dom"],
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "lib": ["es2015", "dom"]
   },
 
   "files": [
@@ -19,7 +17,10 @@
     "src/app2/main.ts",
 
     "src/app3/app.module.ts",
-    "src/app3/main.ts"
+    "src/app3/main.ts",
+
+    "src/app4/app.module.ts",
+    "src/app4/main.ts"
   ],
 
   "angularCompilerOptions": {
