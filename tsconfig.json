@@ -20,7 +20,10 @@
     "src/app3/main.ts",
 
     "src/app4/app.module.ts",
-    "src/app4/main.ts"
+    "src/app4/main.ts",
+
+    "src/app5/app.module.ts",
+    "src/app5/main.ts"
   ],
 
   "angularCompilerOptions": {

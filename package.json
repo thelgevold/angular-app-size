@@ -25,11 +25,12 @@
     "zone.js": "^0.7.5"
   },
   "scripts": {
-    "build": "ngc -p tsconfig.json && npm run bundle1 && npm run bundle2 && npm run bundle3 && npm run bundle4",
+    "build": "ngc -p tsconfig.json && npm run bundle1 && npm run bundle2 && npm run bundle3 && npm run bundle4 && npm run bundle5",
     "bundle1": "rollup -c rollup-config.js -i src/app1/main.js -o dist/build1.js",
     "bundle2": "rollup -c rollup-config.js -i src/app2/main.js -o dist/build2.js",
     "bundle3": "rollup -c rollup-config.js -i src/app3/main.js -o dist/build3.js",
     "bundle4": "rollup -c rollup-config.js -i src/app4/main.js -o dist/build4.js",
+    "bundle5": "rollup -c rollup-config.js -i src/app5/main.js -o dist/build5.js",
     "start": "npm run build && lite-server"
   }
 }
