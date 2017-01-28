@@ -35,6 +35,7 @@
     "start": "npm run build && lite-server",
 
     "ngc-bundle": "ngc -p src/bundling-options/app/tsconfig.json",
-    "rollup-bundle": "npm run ngc-bundle && rollup -c src/bundling-options/rollup/rollup-config.js && lite-server -c bs-config-rollup.js"
+    "rollup-bundle": "npm run ngc-bundle && rollup -c src/bundling-options/rollup/rollup-config.js && lite-server -c bs-config-rollup.js",
+    "webpack-bundle": "npm run ngc-bundle && webpack --config src/bundling-options/webpack/webpack.config.js --progress && lite-server -c bs-config-webpack.js"
   }
 }
