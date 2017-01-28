@@ -2,12 +2,13 @@
   "devDependencies": {
     "compression": "^1.6.2",
     "lite-server": "^2.2.2",
-    "rollup": "0.37",
+    "rollup": "0.41.4",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
     "source-map-explorer": "^1.3.3",
-    "typescript": "^2.1.5"
+    "typescript": "^2.1.5",
+    "webpack": "^2.2.0"
   },
   "dependencies": {
     "@angular/common": "2.4.3",
@@ -31,6 +32,9 @@
     "bundle3": "rollup -c rollup-config.js -i src/app3/main.js -o dist/build3.js -m && source-map-explorer --html dist/build3.js > dist/build3.html",
     "bundle4": "rollup -c rollup-config.js -i src/app4/main.js -o dist/build4.js -m && source-map-explorer --html dist/build4.js > dist/build4.html",
     "bundle5": "rollup -c rollup-config.js -i src/app5/main.js -o dist/build5.js -m && source-map-explorer --html dist/build5.js > dist/build5.html",
-    "start": "npm run build && lite-server"
+    "start": "npm run build && lite-server",
+
+    "ngc-bundle": "ngc -p src/bundling-options/app/tsconfig.json",
+    "rollup-bundle": "npm run ngc-bundle && rollup -c src/bundling-options/rollup/rollup-config.js && lite-server -c bs-config-rollup.js"
   }
 }

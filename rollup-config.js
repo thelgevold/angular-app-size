@@ -4,7 +4,6 @@ import commonjs    from 'rollup-plugin-commonjs';
 import uglify      from 'rollup-plugin-uglify'
 
 export default {
-  sourceMap: false,
   format: 'iife',
   moduleName: 'demo',
   sourceMap: true,
