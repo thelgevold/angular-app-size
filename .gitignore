@@ -1,6 +1,3 @@
 node_modules
 src/aot
 src/bundling-options/app/aot
-src/**/*.js
-src/**/*.js.map
-src/**/*.metadata.json
