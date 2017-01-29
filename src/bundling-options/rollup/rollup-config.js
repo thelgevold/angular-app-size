@@ -14,6 +14,6 @@ export default {
     commonjs({
       include: 'node_modules/rxjs/**',
     }),
-  //  uglify()
+    uglify()
   ]
 }
