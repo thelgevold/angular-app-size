@@ -34,8 +34,5 @@ class CarService {
 /* harmony export (immutable) */ __webpack_exports__["CarService"] = CarService;
 
 
-let carService = new CarService();
-carService.getCar();
-
 /***/ })
 ],[1]);

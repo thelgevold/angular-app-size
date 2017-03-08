@@ -35,8 +35,5 @@ class PersonService {
 /* harmony export (immutable) */ __webpack_exports__["PersonService"] = PersonService;
 
 
-let personService = new PersonService();
-personService.getPerson();
-
 /***/ })
 ],[2]);
