@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Http } from '@angular/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
-import 'rxjs/add/observable/forkJoin';
+var http_1 = require("@angular/http");
+var core_1 = require("@angular/core");
+var Observable_1 = require("rxjs/Observable");
+require("rxjs/add/operator/map");
+require("rxjs/add/operator/mergeMap");
+require("rxjs/add/observable/forkJoin");
 var FriendService = (function () {
     function FriendService(http) {
         this.http = http;
@@ -31,13 +32,13 @@ var FriendService = (function () {
             .map(function (res) { return friends.concat(res.json().friends); }); });
     };
     FriendService.prototype.getFriendsInParallel = function () {
-        return Observable.forkJoin(this.http.get('./friends1.json').map(function (res) { return res.json(); }), this.http.get('./friends2.json').map(function (res) { return res.json(); }));
+        return Observable_1.Observable.forkJoin(this.http.get('./friends1.json').map(function (res) { return res.json(); }), this.http.get('./friends2.json').map(function (res) { return res.json(); }));
     };
     return FriendService;
 }());
 FriendService = __decorate([
-    Injectable(),
-    __metadata("design:paramtypes", [Http])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
 ], FriendService);
-export { FriendService };
+exports.FriendService = FriendService;
 //# sourceMappingURL=friend-service.js.map

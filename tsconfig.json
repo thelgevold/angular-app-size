@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -23,7 +23,10 @@
     "src/app4/main.ts",
 
     "src/app5/app.module.ts",
-    "src/app5/main.ts"
+    "src/app5/main.ts",
+
+    "src/demo/app.module.ts",
+    "src/demo/bootstrap.ts"
   ],
 
   "angularCompilerOptions": {
