@@ -38,7 +38,8 @@
     "closure-bundle": "lite-server -c bs-config-closure.js",
     "rollup-bundle": "npm run ngc-bundle && rollup -c src/bundling-options/rollup/rollup-config.js && lite-server -c bs-config-rollup.js",
     "webpack-bundle": "npm run ngc-bundle && webpack --config src/bundling-options/webpack/webpack.config.js --progress && lite-server -c bs-config-webpack.js",
-  
-    "demo-bundle": "ngc && rollup -c src/demo/rollup-config.js"
+
+    "webpack-tree-shaken-bundle": "tsc -p src/tree-shaking-webpack/tsconfig.json && webpack --config src/tree-shaking-webpack/webpack.config.js --progress",
+    "webpack-code-splitting-bundle": "webpack --config src/code-splitting-webpack/webpack.config.js --progress && lite-server"
   }
 }
