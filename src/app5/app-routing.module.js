@@ -1,17 +1,18 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { ColorComponent } from './color.component';
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var color_component_1 = require("./color.component");
 var routes = [
-    { path: '', component: ColorComponent },
-    { path: 'color/:id', component: ColorComponent },
-    { path: 'color/:id', component: ColorComponent },
-    { path: 'color/:id', component: ColorComponent }
+    { path: '', component: color_component_1.ColorComponent },
+    { path: 'color/:id', component: color_component_1.ColorComponent },
+    { path: 'color/:id', component: color_component_1.ColorComponent },
+    { path: 'color/:id', component: color_component_1.ColorComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -19,10 +20,10 @@ var AppRoutingModule = (function () {
     return AppRoutingModule;
 }());
 AppRoutingModule = __decorate([
-    NgModule({
-        imports: [RouterModule.forRoot(routes)],
-        exports: [RouterModule]
+    core_1.NgModule({
+        imports: [router_1.RouterModule.forRoot(routes)],
+        exports: [router_1.RouterModule]
     })
 ], AppRoutingModule);
-export { AppRoutingModule };
+exports.AppRoutingModule = AppRoutingModule;
 //# sourceMappingURL=app-routing.module.js.map

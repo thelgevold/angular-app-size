@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var ColorComponent = (function () {
     function ColorComponent(route) {
         this.route = route;
@@ -22,10 +23,10 @@ var ColorComponent = (function () {
     return ColorComponent;
 }());
 ColorComponent = __decorate([
-    Component({
+    core_1.Component({
         template: 'The color is: {{color}}'
     }),
-    __metadata("design:paramtypes", [ActivatedRoute])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute])
 ], ColorComponent);
-export { ColorComponent };
+exports.ColorComponent = ColorComponent;
 //# sourceMappingURL=color.component.js.map
