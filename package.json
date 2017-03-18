@@ -40,6 +40,7 @@
     "webpack-bundle": "npm run ngc-bundle && webpack --config src/bundling-options/webpack/webpack.config.js --progress && lite-server -c bs-config-webpack.js",
 
     "webpack-tree-shaken-bundle": "tsc -p src/tree-shaking-webpack/tsconfig.json && webpack --config src/tree-shaking-webpack/webpack.config.js --progress",
+    "webpack-angular-lazy-loading": "ngc -p src/bundling-options/webpack-lazy-loading/tsconfig.json && webpack --config src/bundling-options/webpack-lazy-loading/webpack.config.js --progress && lite-server -c bs-config-lazy.js",
     "webpack-code-splitting-bundle": "webpack --config src/code-splitting-webpack/webpack.config.js --progress && lite-server"
   }
 }
