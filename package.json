@@ -1,5 +1,9 @@
 {
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.1",
     "compression": "^1.6.2",
     "lite-server": "^2.2.2",
     "rollup": "0.41.4",
@@ -33,12 +37,11 @@
     "bundle4": "rollup -c rollup-config.js -i src/app4/main.js -o dist/build4.js -m && source-map-explorer --html dist/build4.js > dist/build4.html",
     "bundle5": "rollup -c rollup-config.js -i src/app5/main.js -o dist/build5.js -m && source-map-explorer --html dist/build5.js > dist/build5.html",
     "start": "npm run build && lite-server",
-
     "ngc-bundle": "ngc -p src/bundling-options/app/tsconfig.json",
     "closure-bundle": "lite-server -c bs-config-closure.js",
     "rollup-bundle": "npm run ngc-bundle && rollup -c src/bundling-options/rollup/rollup-config.js && lite-server -c bs-config-rollup.js",
     "webpack-bundle": "npm run ngc-bundle && webpack --config src/bundling-options/webpack/webpack.config.js --progress && lite-server -c bs-config-webpack.js",
-
+    "webpack-babili": "webpack --config src/webpack-babili/webpack.config.js --progress",
     "webpack-tree-shaken-bundle": "tsc -p src/tree-shaking-webpack/tsconfig.json && webpack --config src/tree-shaking-webpack/webpack.config.js --progress",
     "webpack-angular-lazy-loading": "ngc -p src/bundling-options/webpack-lazy-loading/tsconfig.json && webpack --config src/bundling-options/webpack-lazy-loading/webpack.config.js --progress && lite-server -c bs-config-lazy.js",
     "webpack-code-splitting-bundle": "webpack --config src/code-splitting-webpack/webpack.config.js --progress && lite-server"
